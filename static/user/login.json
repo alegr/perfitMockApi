@@ -1,0 +1,20 @@
+{
+	"href": "/user/login",
+	"success": true,
+	"data":{
+		"token": "Shjg23Asd4Sdg8fd23F4eg8rF83kgd2s",
+		"acl": {
+			"cuenta1": [ 
+				"contacts:admin", 
+				"contacts:export", 
+				"campaigns:admin"
+			],
+			"cuenta2": [ 
+				"contacts:admin", 
+				"contacts:export", 
+				"campaigns:admin"
+			]
+		},
+		"main": "cuenta1"
+	}
+}

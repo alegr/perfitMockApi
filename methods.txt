@@ -1,0 +1,75 @@
+############# User ############
+
+POST /user/login
+HTTP/1.1 200 OK
+{
+	href: “/user/login”,
+	success: true,
+	data:{
+		token: “Shjg23Asd4Sdg8fd23F4eg8rF83kgd2s”,
+		    acl: {
+		          "cuenta1": [ "contacts:admin", 
+		   "contacts:export", 
+		   "campaigns:admin", ...],
+		          "cuenta2": [ "contacts:admin", 
+		   "contacts:export", 
+		   "campaigns:admin", ...]
+		},
+		main: "cuenta1"
+	}
+}
+
+POST /user/logout
+HTTP/1.1 200 OK
+{
+	href: “/user/logout”,
+	success: true
+}
+
+POST /user/resetpassword
+HTTP/1.1 200 OK
+{
+	href: “/user/resetpassword”,
+	success: true
+}
+
+############# Contacts ############
+
+GET /:accountCode/contacts
+
+
+POST /:accountCode/contacts
+
+
+GET /:accountCode/contacts/:id
+
+
+PUT /:accountCode/contacts/:id
+
+
+DELETE /:accountCode/contacts/:id
+
+
+GET /:accountCode/contacts/:id/lists
+
+
+GET /:accountCode/contacts/:id/lists/:listId
+
+
+PUT /:accountCode/contacts/:id/lists/:listId
+
+
+DELETE /:accountCode/contacts/:id/lists/:listId
+
+
+POST /:accountCode/contacts/:id/unsubscribe
+
+
+POST /:accountCode/contacts/import
+
+
+POST /:accountCode/contacts/:action
+
+
+
+
