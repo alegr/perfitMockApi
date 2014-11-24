@@ -1,5 +1,9 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
+
+    Rewriterule ^apps/meli.*$ meli.php?%{QUERY_STRING}
+
     RewriteCond %{REQUEST_FILENAME} !-f
+
     Rewriterule ^([a-z0-9]+)/?(.*?)$ index.php?module=$1&%{QUERY_STRING}
 </IfModule>
