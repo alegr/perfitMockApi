@@ -8,7 +8,7 @@ print_r($_POST);
 print_r($_GET);
 
 /************ Config ***********/
-$callback = 'http://local.perfit/meli.php';
+$callback = 'http://perfit.mangolabs.com.ar/meli.php';
 
 // Get Meli Instance
 $meli = new Meli('1442982409057048', 'g1g6SpZ0ijyKB0lxoBefXOums8BiMiPK', $_SESSION['access_token'], $_SESSION['refresh_token']);
