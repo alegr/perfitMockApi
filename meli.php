@@ -13,6 +13,8 @@ $callback = 'http://perfit.mangolabs.com.ar/meli.php';
 // Get Meli Instance
 $meli = new Meli('1442982409057048', 'g1g6SpZ0ijyKB0lxoBefXOums8BiMiPK', $_SESSION['access_token'], $_SESSION['refresh_token']);
 
+print_r($_SESSION);
+
 // No session or code, click to access
 if(!$_GET['code'] && !$_SESSION['access_token']) {
 	// Get redirect url for auth
@@ -41,3 +43,11 @@ if( $_SESSION['access_token'] && ($_SESSION['expires_in'] < time()) ) {
 		die("Exception: ".$e->getMessage(). "\n");
 	}
 }
+
+// Get item
+$item = $meli->get("/items/MLA-534370290", array('access_token' => $_SESSION['access_token']));
+
+print_r($item);
+
+?>
+
